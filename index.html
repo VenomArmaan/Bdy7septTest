@@ -135,32 +135,58 @@
       100% { transform: translateY(100vh) rotate(360deg); }
     }
 
-    .photo-box {
+  /* Raised and styled photo boxes */
+.photo-box {
   position: absolute;
-  bottom: 20px;
-  width: 120px;
-  height: 120px;
-  border: 4px dashed #fff;
+  bottom: 100px; /* raised from 20px */
+  width: 140px;
+  height: 140px;
+  border: 4px double #fff;
   padding: 5px;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   z-index: 2;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease;
 }
 
 .photo-box.left {
-  left: 20px;
+  left: 25px;
 }
 
 .photo-box.right {
-  right: 20px;
+  right: 25px;
 }
 
 .photo-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
+}
+
+/* Center Signature Box */
+.signature-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  border: 3px dashed #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.3em;
+  color: #fff;
+  z-index: 2;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff8aa1;
+  backdrop-filter: blur(5px);
+  text-shadow: 0 0 5px #000;
+}
+
+.signature-box .gawari {
+  font-style: italic;
+  color: #ffeaa7;
 }
 
   </style>
@@ -196,6 +222,17 @@
 <div class="photo-box right">
   <img src="pic2.jpg" alt="Right Picture" />
 </div>
+
+
+<div class="signature-box">
+  <p>From your dear brother Armaan <br /><span class="gawari">(your gawari✨)</span></p>
+</div>
+
+
+<div class="signature-box">
+  <p>From your dear brother Armaan <br /><span class="gawari">(your gawari✨)</span></p>
+</div>
+
 
 
   <audio autoplay loop hidden>
