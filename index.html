@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🎂 Happy Birthday, Bawadii Billii! 🎉</title>
   <style>
-   
     * {
       margin: 0;
       padding: 0;
@@ -22,7 +21,6 @@
       height: 100vh;
     }
 
-   
     .balloons {
       position: absolute;
       width: 100%;
@@ -37,7 +35,7 @@
       position: absolute;
       width: 100px;
       height: 130px;
-      border-radius: 50% 50% 50% 50%;
+      border-radius: 50%;
       animation: floatBalloon 10s infinite ease-in-out;
     }
 
@@ -75,7 +73,6 @@
       75% { transform: translateX(-50%) rotate(3deg); }
     }
 
-   
     h1 {
       position: relative;
       z-index: 2;
@@ -94,7 +91,6 @@
       50% { transform: translateY(-15px); }
     }
 
-  
     .message-box {
       position: relative;
       z-index: 2;
@@ -112,14 +108,14 @@
 
     .footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 5px;
       width: 100%;
-      font-size: 1.2em;
+      font-size: 1em;
       z-index: 2;
       color: #fff;
     }
 
-    
+    /* Confetti */
     .confetti {
       position: absolute;
       width: 10px;
@@ -135,64 +131,70 @@
       100% { transform: translateY(100vh) rotate(360deg); }
     }
 
-  /* Raised and styled photo boxes */
-.photo-box {
-  position: absolute;
-  bottom: 100px; /* raised from 20px */
-  width: 140px;
-  height: 140px;
-  border: 4px double #fff;
-  padding: 5px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-  z-index: 2;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-  transition: transform 0.3s ease;
-}
+    /* Raised and styled photo boxes */
+    .photo-box {
+      position: absolute;
+      bottom: 120px;
+      width: 140px;
+      height: 140px;
+      border: 4px double #fff;
+      padding: 5px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: 2;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease;
+    }
 
-.photo-box.left {
-  left: 25px;
-}
+    .photo-box.left {
+      left: 25px;
+    }
 
-.photo-box.right {
-  right: 25px;
-}
+    .photo-box.right {
+      right: 25px;
+    }
 
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
-/* Center Signature Box */
-.signature-box {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.25);
-  border: 3px dashed #fff;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 1.3em;
-  color: #fff;
-  z-index: 2;
-  font-weight: bold;
-  box-shadow: 0 0 10px #ff8aa1;
-  backdrop-filter: blur(5px);
-  text-shadow: 0 0 5px #000;
-}
+    /* Center Signature Box */
+    .signature-box {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.25);
+      border: 3px dashed #fff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.3em;
+      color: #fff;
+      z-index: 2;
+      font-weight: bold;
+      box-shadow: 0 0 10px #ff8aa1;
+      backdrop-filter: blur(5px);
+      text-shadow: 0 0 5px #000;
+      animation: fadeIn 3s ease-in-out;
+    }
 
-.signature-box .gawari {
-  font-style: italic;
-  color: #ffeaa7;
-}
+    .signature-box .gawari {
+      font-style: italic;
+      color: #ffeaa7;
+    }
 
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
   </style>
 </head>
 <body>
 
+  <!-- 🎈 Balloons -->
   <div class="balloons">
     <div class="balloon"></div>
     <div class="balloon"></div>
@@ -201,48 +203,38 @@
     <div class="balloon"></div>
   </div>
 
-  
+  <!-- 🎉 Header -->
   <h1>🎂 Happy Birthday, Bawadii Billii !!! 🎉</h1>
 
+  <!-- 💌 Message -->
   <div class="message-box">
     <p>Wishing you all the happiness, joy, and cake in the world today!</p>
     <p>You're not just a year older — you're a year more awesome 😎</p>
     <p>Have a fantastic day filled with love and laughter 💖</p>
   </div>
 
- 
-  <div class="footer">
-    Made with 💜 by Your loving Brother Armaan...
+  <!-- 📸 Photo Boxes -->
+  <div class="photo-box left">
+    <img src="pic1.jpg" alt="Left Picture" />
   </div>
 
-  <div class="photo-box left">
-  <img src="pic1.jpg" alt="Left Picture" />
-</div>
+  <div class="photo-box right">
+    <img src="pic2.jpg" alt="Right Picture" />
+  </div>
 
-<div class="photo-box right">
-  <img src="pic2.jpg" alt="Right Picture" />
-</div>
+  <!-- ✍️ Signature -->
+  <div class="signature-box">
+    <p>From your dear brother Armaan <br /><span class="gawari">(your gawari✨)</span></p>
+  </div>
 
-
-<div class="signature-box">
-  <p>From your dear brother Armaan <br /><span class="gawari">(your gawari✨)</span></p>
-</div>
-
-
-<div class="signature-box">
-  <p>From your dear brother Armaan <br /><span class="gawari">(your gawari✨)</span></p>
-</div>
-
-
-
+  <!-- 🎵 Audio -->
   <audio autoplay loop hidden>
     <source src="happy-birthday-357371.mp3" type="audio/mpeg">
     🎵 Happy Birthday song is playing...
   </audio>
 
- 
+  <!-- 🎊 Confetti Script -->
   <script>
- 
     const colors = ['#feca57', '#ff6b6b', '#48dbfb', '#1dd1a1', '#f368e0'];
     for (let i = 0; i < 50; i++) {
       const confetti = document.createElement('div');
@@ -255,5 +247,11 @@
       document.body.appendChild(confetti);
     }
   </script>
+
+  <!-- 🦶 Footer -->
+  <div class="footer">
+    Made with 💜 by Your loving Brother Armaan...
+  </div>
+
 </body>
 </html>
