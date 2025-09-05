@@ -134,6 +134,35 @@
       0% { transform: translateY(0) rotate(0deg); }
       100% { transform: translateY(100vh) rotate(360deg); }
     }
+
+    .photo-box {
+  position: absolute;
+  bottom: 20px;
+  width: 120px;
+  height: 120px;
+  border: 4px dashed #fff;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.photo-box.left {
+  left: 20px;
+}
+
+.photo-box.right {
+  right: 20px;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
   </style>
 </head>
 <body>
@@ -159,6 +188,15 @@
   <div class="footer">
     Made with 💜 by Your loving Brother Armaan...
   </div>
+
+  <div class="photo-box left">
+  <img src="pic1.jpg" alt="Left Picture" />
+</div>
+
+<div class="photo-box right">
+  <img src="pic2.jpg" alt="Right Picture" />
+</div>
+
 
   <audio autoplay loop hidden>
     <source src="happy-birthday-357371.mp3" type="audio/mpeg">
